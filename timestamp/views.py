@@ -5,7 +5,7 @@ from datetime import datetime
 from django.http import JsonResponse
 
 def index(request):
-    return HttpResponse("timestamp index")
+    return render(request, 'timestamp/index.html')
 
 def api(request, param_str):
     print (param_str)

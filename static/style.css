@@ -1,0 +1,16 @@
+#heading{
+    background:green;
+    color:white;
+}
+.container{
+    padding:0 10px;
+    margin:0px;
+    width:100%;
+}
+#heading a {
+  color:white;
+  text-decoration: none;
+ }
+body {
+    color:red;
+}
