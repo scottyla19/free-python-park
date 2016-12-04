@@ -4,28 +4,90 @@
     {% load staticfiles %}
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+<script src="https://use.fontawesome.com/547c4cd9ad.js"></script>
 <link rel="stylesheet" href="{% static 'style.css' %}">
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <title>{% block title %}My amazing site{% endblock %}</title>
+    <title>{% block title %}Free Python Park{% endblock %}</title>
 </head>
 
 <body>
+<div id="wrap">
     <div class = "container">
         <div id="heading" class="row">
-            <div class="col-md-6"> <a href="{% url 'index' %}"><H2>Free Python Park </H2></a></div>
-            <ul class="list-inline col-md-6 text-right ">
+            <div class="col-md-10"> <a href="{% url 'index' %}"><H2>FreePythonPark <i class="fa fa-tree"></i> </H2></a></div>
+            <!-- Example single danger button -->
 
-                <li ><a href="{% url 'timestamp:index' %}"><H2>Timestamp API</H2> </a></li>
-            </ul>
+            <div class="btn-group ">
+              <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                APIs
+              </button>
+              <div class="dropdown-menu">
+                 <a class="dropdown-item" href="{% url 'timestamp:index' %}">Timestamp API</a>
+                  <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="{% url 'timestamp:index' %}">Header Parser</a>
+                  <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="{% url 'timestamp:index' %}">URL Shortener</a>
+                  <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="{% url 'timestamp:index' %}">Image Search</a>
+                  <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="{% url 'timestamp:index' %}">File Metadata</a>
+              </div>
+            </div>
+
+            <div class="btn-group">
+              <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Web Apps
+              </button>
+              <div class="dropdown-menu">
+                 <a class="dropdown-item" href="{% url 'timestamp:index' %}">Voting App</a>
+                  <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="{% url 'timestamp:index' %}">Nightlife Coordinator</a>
+                  <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="{% url 'timestamp:index' %}">Stocks Charts</a>
+                  <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="{% url 'timestamp:index' %}">Book Trading Club</a>
+                  <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="{% url 'timestamp:index' %}">Pinterest Clone</a>
+              </div>
+            </div>
+
+
 
         </div>
     </div>
 
+    <div class = "container">
+         <div id="content" class="col-md-10 col-md-offset-1">
+            {% block content %}
+             <h1>Welcome to Free Python Park</h1>
+             <p>In order to improve my python and Django skills I have decided to re-create the
+                 <a href="https://www.freecodecamp.com/map-aside#nested-collapseAPIProjects">FreeCodeCamp Back End Developer Projects</a>
+                 using Django instead of some javascript framework. Why would I do this? Mostly because I want to learn python and Django
+             in a more in depth way but also partly because I despise javascript (CSS and front-end development too if you can't tell). In each
+             project you will see explainations as well as links to the original Free Code Camp apps.</p>
+             <p>The code for this project is available on <a href="https://github.com/scottyla19/free-python-park">my github page</a>.
+                 Feel free to check it out.</p>
+             {% endblock %}
+        </div>
 
-    <div id="content">
-        {% block content %}{% endblock %}
     </div>
+    </div>
+    <footer class="footer">
+        <div class="row">
+            <div class="col-md-9"><h3>Scott LaForest</h3></div>
+            <div class="col-md-1"><a href="https://github.com/scottyla19"><h3><i class="fa fa-github"></i></h3></a></div>
+            <div class="col-md-1"><a href="mailto:scottyla19@gmail.com"><h3><i class="fa fa-envelope"></i></h3></a></div>
+            <div class="col-md-1"><a href="tel: 4062404484"><h3><i class="fa fa-phone"></i></h3></a></div>
+        </div>
+
+    </footer>
+ <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
 </body>
+
 </html>
