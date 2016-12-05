@@ -1,4 +1,22 @@
 {% extends "base.html" %}
 {% block title %}Timestamp API{% endblock %}
 
-{% block content %}Hello timestamp API{% endblock %}
+{% block content %}
+<h2>Timestamp API</h2>
+<p>Add a date, in any common format, or a unix timestamp to end of this URL and receive a response with a unix timestamp and the original date.
+The response is in JSON.</p>
+<h3>Examples:</h3>
+
+    <div class="row">
+        <div class="col-md-4">{{request.build_absolute_uri}}/01-01-2001</div>
+        <div class="col-md-1"><i class="fa fa-long-arrow-right"></i></div>
+        <div class="col-md-4">{"natural": "January 1, 2001", "unix": "978307200"}</div>
+    </div>
+ <div class="row">
+        <div class="col-md-4">{{request.build_absolute_uri}}//1480896000</div>
+        <div class="col-md-1"><i class="fa fa-long-arrow-right"></i></div>
+        <div class="col-md-5">{"natural": "December 5, 2016", "unix": "1480896000"}</div>
+    </div>
+
+
+    {% endblock %}

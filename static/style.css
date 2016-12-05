@@ -50,7 +50,7 @@ html, body {
     color:#ffd94f;
     padding-left: 10px;
   position: relative;
-  margin-top: -40px; /* negative value of footer height */
+  margin-top: -50px; /* negative value of footer height */
   height: 50px;
   clear:both;
 
