@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}URL Shortener API{% endblock %}
+
+{% block content %}
+<h2>URL Shortener API</h2>
+<p>Add a valid url after this url with new/ prepended. For example {{request.build_absolute_uri}}/new/http://www.google.com.
+You will recieve a response in JSON that shows your original url and the 'shortened' url. Try to access the shortened url and
+get redirected. Totaly cool, even if not really practical or shortened at all.</p>
+<h3>Example:</h3>
+
+    <div class="row">
+        <div class="col-md-4">{{request.build_absolute_uri}}/new/http://www.google.com</div>
+        <div class="col-md-1"><i class="fa fa-long-arrow-right"></i></div>
+        <div class="col-md-7">{"original": "http://www.google.com<", "short": "{{request.build_absolute_uri}}/Amgtx2"}</div>
+    </div>
+<br>
+ <p>You could then access {{request.build_absolute_uri}}/Amgtx2 and be redirected to Google's homepage.</p>
+
+
+    {% endblock %}

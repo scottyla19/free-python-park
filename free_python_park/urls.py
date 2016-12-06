@@ -24,5 +24,6 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^timestamp/', include('timestamp.urls')),
     url(r'^header-parse/', include('header.urls')),
+    url(r'^shorturl/', include('shorturl.urls')),
     url(r'^admin/', admin.site.urls),
 ]
