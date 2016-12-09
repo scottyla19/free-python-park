@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'timestamp',
     'header',
-    'shorturl'
+    'shorturl.apps.ShorturlConfig',
+
 ]
 
 MIDDLEWARE = [
