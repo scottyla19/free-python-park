@@ -20,7 +20,7 @@ def api(request, new_url):
     try:
         val(new_url)
         current_site = get_current_site(request)
-        url = ShortUrl(original_url=new_url, base_url=request.META['HTTP_HOST'] + "/shorturl/")
+        url = ShortUrl(original_url=new_url, base_url=str(current_site) + "/shorturl/")
         url.save()
         return JsonResponse({'original_url':url.original_url,'short_url':url.short_url })
     except ValidationError:
