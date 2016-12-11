@@ -25,5 +25,6 @@ urlpatterns = [
     url(r'^timestamp/', include('timestamp.urls')),
     url(r'^header-parse/', include('header.urls')),
     url(r'^shorturl/', include('shorturl.urls')),
+    url(r'^image-search/', include('image_search.urls')),
     url(r'^admin/', admin.site.urls),
 ]

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'timestamp',
     'header',
     'shorturl.apps.ShorturlConfig',
+    'image_search'
 
 ]
 
