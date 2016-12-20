@@ -12,6 +12,7 @@ def index(request):
     return render(request, 'shorturl/index.html')
 
 def visit(request, visit_url):
+
     short = ShortUrl.objects.filter(unique_id = visit_url).values()[0]
     return redirect(short["original_url"])
 

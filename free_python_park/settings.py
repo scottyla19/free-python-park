@@ -21,8 +21,8 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'h1mwp8-t&0iv5#x+=o*+#8hw7dr*dko70+itzy2cxc^#xt%xe_'
-GOOGLE_API_KEY = os.environ['GOOGLE_API_KEY']
-GOOGLE_API_CX = os.environ['GOOGLE_API_CX']
+GOOGLE_API_KEY = 'AIzaSyA5pAIPYxdmmA4r9RpPX3Ph0K9WC06-92s	'#os.environ['GOOGLE_API_KEY']
+GOOGLE_API_CX = '00242624870546775731:tke6tgrc7io'  #os.environ['GOOGLE_API_CX']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'timestamp',
     'header',
     'shorturl.apps.ShorturlConfig',
-    'image_search'
+    'image_search',
+    'file_meta'
 
 ]
 
