@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Image Search API{% endblock %}
+
+{% block content %}
+<h2>Image Search API</h2>
+<p>This API allows users to search for a term and it responds with a JSON response that includes ten images, their urls, and
+    alternate text for each image. For example {{request.build_absolute_uri}}api/crying%20jordan will responde with JSON
+    that shows your image url and the page url and alternate text. You can also paginate the response by adding the the optional
+    setting of 'offset'.  For example  {{request.build_absolute_uri}}api/crying%20jordan?offset=10 will offset the items by 10 values. </p>
+
+
+
+    {% endblock %}
