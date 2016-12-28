@@ -3,7 +3,6 @@ from django.http import JsonResponse
 from django.conf import settings
 from django.core import serializers
 
-from image_search.models import ImageSearch
 import requests
 from image_search.models import ImageSearch
 
