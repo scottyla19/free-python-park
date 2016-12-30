@@ -28,4 +28,5 @@ urlpatterns = [
     url(r'^image-search/', include('image_search.urls')),
     url(r'^file-meta/', include('file_meta.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^polls/', include('polls.urls')),
 ]

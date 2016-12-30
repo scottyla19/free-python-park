@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block extrahead %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js" type="text/javascript"></script>
+
+{% endblock %}
+
+{% block title %}Polls App{% endblock %}
+
+{% block content %}
+<h2>Polls App </h2>
+
+<h1>{{ question.question_text }}</h1>
+
+
+<canvas id="myChart" width="300" height="200"></canvas>
+<script>
+
+var dynamicColors = function() {
+        var r = Math.floor(Math.random() * 255);
+        var g = Math.floor(Math.random() * 255);
+        var b = Math.floor(Math.random() * 255);
+        return "rgb(" + r + "," + g + "," + b + ")";
+        }
+var cols = []
+for(var i = 0; i < {{ choices|length }}; i++){
+    cols.push(dynamicColors())
+}
+    var data = {
+        labels: {{ choices|safe }},
+        datasets: [
+            {
+                data: {{ counts|safe }},
+                backgroundColor: cols
+
+            }]
+    };
+    var ctx = document.getElementById("myChart").getContext("2d");
+    var myDoughnutChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: data
+    });
+
+
+</script>
+    {% endblock %}
+
+{% block extrafoot %}
+
+{% endblock %}

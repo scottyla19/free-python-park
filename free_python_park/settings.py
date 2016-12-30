@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'header',
     'shorturl.apps.ShorturlConfig',
     'image_search',
-    'file_meta'
+    'file_meta',
+    'polls.apps.PollsConfig'
 
 ]
 
